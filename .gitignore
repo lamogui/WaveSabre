@@ -38,3 +38,6 @@ Vsts/*/*.def
 
 # Ignore VS 2017 IDE fluff
 .vs/
+
+#QtCreator
+WaveSabre.pro.user
