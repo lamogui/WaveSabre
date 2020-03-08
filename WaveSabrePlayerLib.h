@@ -1,9 +1,6 @@
-#ifndef __WAVESABREPLAYERLIB_H__
-#define __WAVESABREPLAYERLIB_H__
+#pragma once
 
-#include "WaveSabrePlayerLib/IPlayer.h"
-#include "WaveSabrePlayerLib/RealtimePlayer.h"
-#include "WaveSabrePlayerLib/PreRenderPlayer.h"
-#include "WaveSabrePlayerLib/WavWriter.h"
-
-#endif
+#include "extern/WaveSabre/WaveSabrePlayerLib/IPlayer.h"
+#include "extern/WaveSabre/WaveSabrePlayerLib/RealtimePlayer.h"
+#include "extern/WaveSabre/WaveSabrePlayerLib/PreRenderPlayer.h"
+#include "extern/WaveSabre/WaveSabrePlayerLib/WavWriter.h"

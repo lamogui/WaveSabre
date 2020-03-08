@@ -1,5 +1,5 @@
-#include <WaveSabreCore/BiquadFilter.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/BiquadFilter.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 #include <math.h>
 

@@ -1,10 +1,13 @@
-#ifndef __WAVESABREPLAYERLIB_DIRECTSOUNDRENDERTHREAD_H__
-#define __WAVESABREPLAYERLIB_DIRECTSOUNDRENDERTHREAD_H__
+#pragma once
+
+#include "sys_builddefines.h"
+#ifdef PROUT_WIN32
+#include "platforms/win32/sys_win32.h"
+#endif 
 
 #include "SongRenderer.h"
 #include "CriticalSection.h"
 
-#include <Windows.h>
 #include <dsound.h>
 
 namespace WaveSabrePlayerLib
@@ -38,5 +41,3 @@ namespace WaveSabrePlayerLib
 		LPDIRECTSOUNDBUFFER buffer;
 	};
 }
-
-#endif

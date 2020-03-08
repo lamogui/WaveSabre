@@ -1,11 +1,10 @@
-#ifndef __WAVESABRECORE_CATHEDRAL_H__
-#define __WAVESABRECORE_CATHEDRAL_H__
+#pragma once 
 
-#include "Device.h"
-#include "DelayBuffer.h"
-#include "StateVariableFilter.h"
-#include "Comb.h"
-#include "AllPass.h"
+#include "extern/WaveSabre/WaveSabreCore/Device.h"
+#include "extern/WaveSabre/WaveSabreCore/DelayBuffer.h"
+#include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
+#include "extern/WaveSabre/WaveSabreCore/Comb.h"
+#include "extern/WaveSabre/WaveSabreCore/AllPass.h"
 
 namespace WaveSabreCore
 {
@@ -63,5 +62,3 @@ namespace WaveSabreCore
 		DelayBuffer preDelayBuffer;
 	};
 }
-
-#endif

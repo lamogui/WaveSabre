@@ -1,6 +1,6 @@
-#include <WaveSabreCore/SynthDevice.h>
+#include <extern/WaveSabre/WaveSabreCore/SynthDevice.h>
 
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 namespace WaveSabreCore
 {

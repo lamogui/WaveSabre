@@ -1,4 +1,4 @@
-#include <WaveSabrePlayerLib/PreRenderPlayer.h>
+#include <extern/WaveSabre/WaveSabrePlayerLib/PreRenderPlayer.h>
 
 namespace WaveSabrePlayerLib
 {

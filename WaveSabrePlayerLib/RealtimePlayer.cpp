@@ -1,4 +1,4 @@
-#include <WaveSabrePlayerLib/RealtimePlayer.h>
+#include <extern/WaveSabre/WaveSabrePlayerLib/RealtimePlayer.h>
 
 namespace WaveSabrePlayerLib
 {

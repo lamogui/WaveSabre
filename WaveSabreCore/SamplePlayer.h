@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_SAMPLEPLAYER_H__
-#define __WAVESABRECORE_SAMPLEPLAYER_H__
+#pragma once
 
 namespace WaveSabreCore
 {
@@ -58,5 +57,3 @@ namespace WaveSabreCore
 		bool reverse;
 	};
 }
-
-#endif

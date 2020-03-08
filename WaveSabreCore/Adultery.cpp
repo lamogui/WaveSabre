@@ -1,6 +1,6 @@
-#include <WaveSabreCore/Adultery.h>
-#include <WaveSabreCore/Helpers.h>
-#include <WaveSabreCore/GmDls.h>
+#include <extern/WaveSabre/WaveSabreCore/Adultery.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/GmDls.h>
 
 #include <string.h>
 #include <math.h>

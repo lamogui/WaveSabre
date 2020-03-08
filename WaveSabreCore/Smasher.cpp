@@ -1,7 +1,7 @@
-#include <WaveSabreCore/Smasher.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/Smasher.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h>
+#include <math.h> // TODO remove STD
 
 namespace WaveSabreCore
 {

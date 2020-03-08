@@ -1,6 +1,4 @@
-#ifndef __WAVESABRECORE_DELAYBUFFER_H__
-#define __WAVESABRECORE_DELAYBUFFER_H__
-
+#pragma once
 namespace WaveSabreCore
 {
 	class DelayBuffer
@@ -20,5 +18,3 @@ namespace WaveSabreCore
 		int currentPosition;
 	};
 }
-
-#endif

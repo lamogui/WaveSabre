@@ -1,9 +1,8 @@
-#ifndef __WAVESABREPLAYERLIB_PRERENDERPLAYER_H__
-#define __WAVESABREPLAYERLIB_PRERENDERPLAYER_H__
+#pragma once
 
-#include "IPlayer.h"
-#include "SongRenderer.h"
-#include "DirectSoundRenderThread.h"
+#include "extern/WaveSabre/WaveSabrePlayerLib/IPlayer.h"
+#include "extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h"
+#include "extern/WaveSabre/WaveSabrePlayerLib/DirectSoundRenderThread.h"
 
 namespace WaveSabrePlayerLib
 {
@@ -38,5 +37,3 @@ namespace WaveSabrePlayerLib
 		DirectSoundRenderThread *renderThread;
 	};
 }
-
-#endif

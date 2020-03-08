@@ -1,7 +1,9 @@
-#ifndef __WAVESABREPLAYERLIB_CRITICALSECTION__
-#define __WAVESABREPLAYERLIB_CRITICALSECTION__
+#pragma once
 
-#include <Windows.h>
+#include "sys_builddefines.h"
+#ifdef PROUT_WIN32
+	#include "platforms/win32/sys_win32.h"
+#endif 
 
 namespace WaveSabrePlayerLib
 {
@@ -28,4 +30,4 @@ namespace WaveSabrePlayerLib
 	};
 }
 
-#endif
+

@@ -1,18 +1,22 @@
-#ifndef __WAVESABRECORE_SPECIMEN_H__
-#define __WAVESABRECORE_SPECIMEN_H__
+#pragma once
 
-#include "SynthDevice.h"
-#include "Envelope.h"
-#include "StateVariableFilter.h"
-#include "SamplePlayer.h"
+#include "sys_builddefines.h"
+#ifdef PROUT_WIN32
+	#include "platforms/win32/sys_win32.h"
+	#include <mmreg.h>
+	#ifdef UNICODE
+		#define _UNICODE
+	#endif
+	typedef DWORD	FOURCC;
+	#include <MSAcm.h>
+#endif 
 
-#include <Windows.h>
-#include <mmreg.h>
+#include "extern/WaveSabre/WaveSabreCore/SynthDevice.h"
+#include "extern/WaveSabre/WaveSabreCore/Envelope.h"
+#include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
+#include "extern/WaveSabre/WaveSabreCore/SamplePlayer.h"
 
-#ifdef UNICODE
-#define _UNICODE
-#endif
-#include <MSAcm.h>
+
 
 namespace WaveSabreCore
 {
@@ -131,4 +135,3 @@ namespace WaveSabreCore
 	};
 }
 
-#endif

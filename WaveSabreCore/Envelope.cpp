@@ -1,7 +1,8 @@
-#include <WaveSabreCore/Envelope.h>
-#include <WaveSabreCore/Helpers.h>
+#pragma once
 
-#include <math.h>
+#include <math.h> // TODO remove STD
+#include "extern/WaveSabre/WaveSabreCore/Helpers.h"
+#include "extern/WaveSabre/WaveSabreCore/Envelope.h"
 
 namespace WaveSabreCore
 {

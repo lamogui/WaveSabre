@@ -1,10 +1,8 @@
-#ifndef __WAVESABRECORE_TWISTER_H__
-#define __WAVESABRECORE_TWISTER_H__
-
-#include "Device.h"
-#include "ResampleBuffer.h"
-#include "AllPassDelay.h"
-#include "StateVariableFilter.h"
+#pragma once
+#include "extern/WaveSabre/WaveSabreCore/Device.h"
+#include "extern/WaveSabre/WaveSabreCore/ResampleBuffer.h"
+#include "extern/WaveSabre/WaveSabreCore/AllPassDelay.h"
+#include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
 
 namespace WaveSabreCore
 {
@@ -69,5 +67,3 @@ namespace WaveSabreCore
 		StateVariableFilter lowCutFilter[2], highCutFilter[2];
 	};
 }
-
-#endif

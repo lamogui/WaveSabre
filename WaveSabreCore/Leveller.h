@@ -1,8 +1,7 @@
-#ifndef __WAVESABRECORE_LEVELLER_H__
-#define __WAVESABRECORE_LEVELLER_H__
+#pragma once
 
-#include "Device.h"
-#include "BiquadFilter.h"
+#include "extern/WaveSabre/WaveSabreCore/Device.h"
+#include "extern/WaveSabre/WaveSabreCore/BiquadFilter.h"
 
 namespace WaveSabreCore
 {
@@ -56,5 +55,3 @@ namespace WaveSabreCore
 		BiquadFilter lowpass[2];
 	};
 }
-
-#endif

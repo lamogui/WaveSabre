@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_ALLPASSDELAY_H__
-#define __WAVESABRECORE_ALLPASSDELAY_H__
+#pragma once
 
 namespace WaveSabreCore
 {
@@ -16,4 +15,3 @@ namespace WaveSabreCore
 	};
 }
 
-#endif

@@ -1,5 +1,5 @@
-#include <WaveSabreCore/Scissor.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/Scissor.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 namespace WaveSabreCore
 {

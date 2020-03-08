@@ -1,5 +1,5 @@
-#include <WaveSabreCore/ResampleBuffer.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/ResampleBuffer.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 #include <math.h>
 
 namespace WaveSabreCore

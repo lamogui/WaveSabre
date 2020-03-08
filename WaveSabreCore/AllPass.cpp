@@ -1,5 +1,5 @@
-#include <WaveSabreCore/AllPass.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/AllPass.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 #include <math.h>
 

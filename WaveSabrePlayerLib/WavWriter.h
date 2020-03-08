@@ -1,9 +1,8 @@
-#ifndef __WAVESABREPLAYERLIB_WAVWRITER_H__
-#define __WAVESABREPLAYERLIB_WAVWRITER_H__
+#pragma once
 
 #include <stdio.h>
 
-#include "SongRenderer.h"
+#include "extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h"
 
 namespace WaveSabrePlayerLib
 {
@@ -24,5 +23,3 @@ namespace WaveSabrePlayerLib
 		SongRenderer *songRenderer;
 	};
 }
-
-#endif

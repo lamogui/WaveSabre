@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_MXCSR_FLAG_GUARD_H__
-#define __WAVESABRECORE_MXCSR_FLAG_GUARD_H__
+#pragma once
 
 namespace WaveSabreCore
 {
@@ -13,5 +12,3 @@ namespace WaveSabreCore
 		unsigned int mxcsrRestore;
 	};
 }
-
-#endif

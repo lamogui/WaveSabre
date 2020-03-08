@@ -1,6 +1,10 @@
-#include <WaveSabreCore/GmDls.h>
+#include "sys_builddefines.h"
+#ifdef PROUT_WIN32
+#include "platforms/win32/sys_win32.h"
+#endif 
 
-#include <Windows.h>
+#include <extern/WaveSabre/WaveSabreCore/GmDls.h>
+
 
 static const char *gmDlsPaths[2] =
 {

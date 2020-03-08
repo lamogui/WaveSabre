@@ -1,8 +1,7 @@
-#ifndef __WAVESABRECORE_FALCON_H__
-#define __WAVESABRECORE_FALCON_H__
+#pragma once
 
-#include "SynthDevice.h"
-#include "Envelope.h"
+#include "extern/WaveSabre/WaveSabreCore/SynthDevice.h"
+#include "extern/WaveSabre/WaveSabreCore/Envelope.h"
 
 namespace WaveSabreCore
 {
@@ -93,4 +92,3 @@ namespace WaveSabreCore
 	};
 }
 
-#endif

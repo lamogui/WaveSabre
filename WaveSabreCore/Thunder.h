@@ -1,15 +1,19 @@
-#ifndef __WAVESABRECORE_THUNDER_H__
-#define __WAVESABRECORE_THUNDER_H__
+#pragma once
 
-#include "SynthDevice.h"
+#include "sys_builddefines.h"
+#ifdef PROUT_WIN32
+	#include "platforms/win32/sys_win32.h"
+	#include <mmreg.h>
 
-#include <Windows.h>
-#include <mmreg.h>
+	#ifdef UNICODE
+		#define _UNICODE
+	#endif
+	typedef DWORD	FOURCC;
+	#include <MSAcm.h>
+#endif 
 
-#ifdef UNICODE
-#define _UNICODE
-#endif
-#include <MSAcm.h>
+#include "extern/WaveSabre/WaveSabreCore/SynthDevice.h"
+
 
 namespace WaveSabreCore
 {
@@ -59,5 +63,3 @@ namespace WaveSabreCore
 		int sampleLength;
 	};
 }
-
-#endif

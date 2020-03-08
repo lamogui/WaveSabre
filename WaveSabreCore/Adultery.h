@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_ADULTERY_H__
-#define __WAVESABRECORE_ADULTERY_H__
+#pragma once
 
 #include "SynthDevice.h"
 #include "Envelope.h"
@@ -108,5 +107,3 @@ namespace WaveSabreCore
 		float modAttack, modDecay, modSustain, modRelease;
 	};
 }
-
-#endif

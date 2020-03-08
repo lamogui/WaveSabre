@@ -1,9 +1,8 @@
-#ifndef __WAVESABRECORE_SLAUGHTER_H__
-#define __WAVESABRECORE_SLAUGHTER_H__
+#pragma once
 
-#include "SynthDevice.h"
-#include "Envelope.h"
-#include "StateVariableFilter.h"
+#include "extern/WaveSabre/WaveSabreCore/SynthDevice.h"
+#include "extern/WaveSabre/WaveSabreCore/Envelope.h"
+#include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
 
 namespace WaveSabreCore
 {
@@ -119,5 +118,3 @@ namespace WaveSabreCore
 		float masterLevel;
 	};
 }
-
-#endif

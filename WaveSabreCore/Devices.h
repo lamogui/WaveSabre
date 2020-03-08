@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_DEVICES_H__
-#define __WAVESABRECORE_DEVICES_H__
+#pragma once
 
 #include "Falcon.h"
 #include "Slaughter.h"
@@ -16,4 +15,3 @@
 #include "Twister.h"
 #include "Cathedral.h"
 
-#endif

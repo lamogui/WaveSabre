@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_ECHO_H__
-#define __WAVESABRECORE_ECHO_H__
+#pragma once
 
 #include "Device.h"
 #include "DelayBuffer.h"
@@ -50,5 +49,3 @@ namespace WaveSabreCore
 		StateVariableFilter lowCutFilter[2], highCutFilter[2];
 	};
 }
-
-#endif

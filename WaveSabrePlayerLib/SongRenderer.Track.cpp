@@ -1,4 +1,4 @@
-#include <WaveSabrePlayerLib/SongRenderer.h>
+#include <extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h>
 
 using namespace WaveSabreCore;
 

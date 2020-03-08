@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_STATEVARIABLEFILTER_H__
-#define __WAVESABRECORE_STATEVARIABLEFILTER_H__
+#pragma once
 
 namespace WaveSabreCore
 {
@@ -37,5 +36,3 @@ namespace WaveSabreCore
 		float f;
 	};
 }
-
-#endif

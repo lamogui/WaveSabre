@@ -1,5 +1,5 @@
-#include <WaveSabreCore/Falcon.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/Falcon.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 #include <math.h>
 

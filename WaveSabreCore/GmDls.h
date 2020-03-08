@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_GMDLS_H__
-#define __WAVESABRECORE_GMDLS_H__
+#pragma once
 
 namespace WaveSabreCore
 {
@@ -13,4 +12,3 @@ namespace WaveSabreCore
 	};
 }
 
-#endif

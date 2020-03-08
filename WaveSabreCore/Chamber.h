@@ -1,9 +1,8 @@
-#ifndef __WAVESABRECORE_CHAMBER_H__
-#define __WAVESABRECORE_CHAMBER_H__
+#pragma once
 
-#include "Device.h"
-#include "DelayBuffer.h"
-#include "StateVariableFilter.h"
+#include "extern/WaveSabre/WaveSabreCore/Device.h"
+#include "extern/WaveSabre/WaveSabreCore/DelayBuffer.h"
+#include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
 
 namespace WaveSabreCore
 {
@@ -51,4 +50,3 @@ namespace WaveSabreCore
 	};
 }
 
-#endif

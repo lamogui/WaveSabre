@@ -1,7 +1,6 @@
-#ifndef __WAVESABRECORE_SYNTHDEVICE_H__
-#define __WAVESABRECORE_SYNTHDEVICE_H__
+#pragma once
 
-#include "Device.h"
+#include "extern/WaveSabre/WaveSabreCore/Device.h"
 
 namespace WaveSabreCore
 {
@@ -100,5 +99,3 @@ namespace WaveSabreCore
 		Event events[maxEvents];
 	};
 }
-
-#endif

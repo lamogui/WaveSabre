@@ -1,8 +1,8 @@
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 #include <inttypes.h>
 #define _USE_MATH_DEFINES
-#include <math.h>
+#include <math.h> // TODO remove STD
 
 #if defined( _MSC_VER ) && !defined( _WIN64 ) // TODO: make assembly equivalent for x64 (use intrinsic ?)
 static __declspec(naked) double __vectorcall fpuPow(double x, double y)

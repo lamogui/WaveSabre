@@ -1,5 +1,5 @@
-#include <WaveSabreCore/Twister.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/Twister.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 int const lookAhead = 4;
 

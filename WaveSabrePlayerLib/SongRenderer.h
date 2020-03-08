@@ -1,9 +1,8 @@
-#ifndef __WAVESABREPLAYERLIB_SONGRENDERER_H__
-#define __WAVESABREPLAYERLIB_SONGRENDERER_H__
+#pragma once
 
 #include "CriticalSection.h"
 
-#include <WaveSabreCore.h>
+#include <extern/WaveSabre/WaveSabreCore.h>
 
 namespace WaveSabrePlayerLib
 {
@@ -193,5 +192,3 @@ namespace WaveSabrePlayerLib
 		HANDLE renderDoneEvent;
 	};
 }
-
-#endif

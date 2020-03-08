@@ -1,4 +1,4 @@
-#include <WaveSabrePlayerLib/IPlayer.h>
+#include <extern/WaveSabre/WaveSabrePlayerLib/IPlayer.h>
 
 namespace WaveSabrePlayerLib
 {

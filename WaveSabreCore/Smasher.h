@@ -1,8 +1,7 @@
-#ifndef __WAVESABRECORE_SMASHER_H__
-#define __WAVESABRECORE_SMASHER_H__
+#pragma once
 
-#include "Device.h"
-#include "DelayBuffer.h"
+#include "extern/WaveSabre/WaveSabreCore/Device.h"
+#include "extern/WaveSabre/WaveSabreCore/DelayBuffer.h"
 
 namespace WaveSabreCore
 {
@@ -45,4 +44,3 @@ namespace WaveSabreCore
 	};
 }
 
-#endif

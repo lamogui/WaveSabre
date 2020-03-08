@@ -1,4 +1,4 @@
-#include <WaveSabrePlayerLib/SongRenderer.h>
+#include <extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h>
 
 using namespace WaveSabreCore;
 
@@ -37,7 +37,7 @@ namespace WaveSabrePlayerLib
 			for (int m = 0; m < numEvents; m++)
 			{
 				midiLanes[i]->events[m].TimeStamp = readInt();
-				byte note = readByte();
+				unsigned char note = readByte();
 				if ((note & 0x80) == 0x00)
 				{
 					midiLanes[i]->events[m].Type = (EventType)0;

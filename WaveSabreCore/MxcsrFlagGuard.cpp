@@ -1,4 +1,4 @@
-#include <WaveSabreCore/MxcsrFlagGuard.h>
+#include <extern/WaveSabre/WaveSabreCore/MxcsrFlagGuard.h>
 
 #include <xmmintrin.h>
 #include <pmmintrin.h>

@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_RESAMPLEBUFFER_H__
-#define __WAVESABRECORE_RESAMPLEBUFFER_H__
+#pragma once
 
 namespace WaveSabreCore
 {
@@ -22,4 +21,4 @@ namespace WaveSabreCore
 	};
 }
 
-#endif
+

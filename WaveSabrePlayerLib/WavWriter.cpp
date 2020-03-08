@@ -1,6 +1,10 @@
-#include <WaveSabrePlayerLib/WavWriter.h>
 
-#include <Windows.h>
+#include "sys_builddefines.h"
+#ifdef PROUT_WIN32
+#include "platforms/win32/sys_win32.h"
+#endif 
+
+#include <extern/WaveSabre/WaveSabrePlayerLib/WavWriter.h>
 
 namespace WaveSabrePlayerLib
 {

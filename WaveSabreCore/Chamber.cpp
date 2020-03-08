@@ -1,5 +1,5 @@
-#include <WaveSabreCore/Chamber.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/Chamber.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 namespace WaveSabreCore
 {

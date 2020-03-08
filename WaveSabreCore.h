@@ -1,20 +1,17 @@
-#ifndef __WAVESABRECORE_H__
-#define __WAVESABRECORE_H__
+#pragma once
 
-#include "WaveSabreCore/Device.h"
-#include "WaveSabreCore/SynthDevice.h"
+#include "extern/WaveSabre/WaveSabreCore/Device.h"
+#include "extern/WaveSabre/WaveSabreCore/SynthDevice.h"
 
-#include "WaveSabreCore/Helpers.h"
-#include "WaveSabreCore/Envelope.h"
-#include "WaveSabreCore/BiquadFilter.h"
-#include "WaveSabreCore/StateVariableFilter.h"
-#include "WaveSabreCore/DelayBuffer.h"
-#include "WaveSabreCore/AllPassDelay.h"
-#include "WaveSabreCore/Comb.h"
-#include "WaveSabreCore/ResampleBuffer.h"
-#include "WaveSabreCore/GmDls.h"
-#include "WaveSabreCore/MxcsrFlagGuard.h"
+#include "extern/WaveSabre/WaveSabreCore/Helpers.h"
+#include "extern/WaveSabre/WaveSabreCore/Envelope.h"
+#include "extern/WaveSabre/WaveSabreCore/BiquadFilter.h"
+#include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
+#include "extern/WaveSabre/WaveSabreCore/DelayBuffer.h"
+#include "extern/WaveSabre/WaveSabreCore/AllPassDelay.h"
+#include "extern/WaveSabre/WaveSabreCore/Comb.h"
+#include "extern/WaveSabre/WaveSabreCore/ResampleBuffer.h"
+#include "extern/WaveSabre/WaveSabreCore/GmDls.h"
+#include "extern/WaveSabre/WaveSabreCore/MxcsrFlagGuard.h"
 
-#include "WaveSabreCore/Devices.h"
-
-#endif
+#include "extern/WaveSabre/WaveSabreCore/Devices.h"

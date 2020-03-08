@@ -1,5 +1,4 @@
-#ifndef __WAVESABREPLAYERLIB_IPLAYER_H__
-#define __WAVESABREPLAYERLIB_IPLAYER_H__
+#pragma once
 
 namespace WaveSabrePlayerLib
 {
@@ -16,5 +15,3 @@ namespace WaveSabrePlayerLib
 		virtual double GetSongPos() const = 0;
 	};
 }
-
-#endif

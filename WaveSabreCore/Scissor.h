@@ -1,7 +1,6 @@
-#ifndef __WAVESABRECORE_SCISSOR_H__
-#define __WAVESABRECORE_SCISSOR_H__
+#pragma once
 
-#include "Device.h"
+#include "extern/WaveSabre/WaveSabreCore/Device.h"
 
 namespace WaveSabreCore
 {
@@ -54,5 +53,3 @@ namespace WaveSabreCore
 		float lastSample[2];
 	};
 }
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef __WAVESABRECORE_BIQUADFILTER_H__
-#define __WAVESABRECORE_BIQUADFILTER_H__
+#pragma once
 
 namespace WaveSabreCore
 {
@@ -36,5 +35,3 @@ namespace WaveSabreCore
 		float lastOutput, lastLastOutput;
 	};
 }
-
-#endif

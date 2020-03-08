@@ -1,4 +1,4 @@
-#include <WaveSabrePlayerLib/DirectSoundRenderThread.h>
+#include <extern/WaveSabre/WaveSabrePlayerLib/DirectSoundRenderThread.h>
 
 namespace WaveSabrePlayerLib
 {

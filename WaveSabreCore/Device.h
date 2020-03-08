@@ -1,6 +1,4 @@
-#ifndef __WAVESABRECORE_DEVICE_H__
-#define __WAVESABRECORE_DEVICE_H__
-
+#pragma once
 namespace WaveSabreCore
 {
 	class Device
@@ -31,5 +29,3 @@ namespace WaveSabreCore
 		void *chunkData;
 	};
 }
-
-#endif

@@ -1,7 +1,7 @@
-#include <WaveSabreCore/Cathedral.h>
-#include <WaveSabreCore/AllPass.h>
-#include <WaveSabreCore/Comb.h>
-#include <WaveSabreCore/Helpers.h>
+#include <extern/WaveSabre/WaveSabreCore/Cathedral.h>
+#include <extern/WaveSabre/WaveSabreCore/AllPass.h>
+#include <extern/WaveSabre/WaveSabreCore/Comb.h>
+#include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 namespace WaveSabreCore
 {

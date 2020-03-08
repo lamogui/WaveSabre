@@ -1,9 +1,8 @@
-#ifndef __WAVESABRECORE_HELPERS_H__
-#define __WAVESABRECORE_HELPERS_H__
+#pragma once
 
-#include "StateVariableFilter.h"
-#include "Twister.h"
-#include "SynthDevice.h"
+#include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
+#include "extern/WaveSabre/WaveSabreCore/Twister.h"
+#include "extern/WaveSabre/WaveSabreCore/SynthDevice.h"
 
 namespace WaveSabreCore
 {
@@ -79,4 +78,3 @@ namespace WaveSabreCore
 	};
 }
 
-#endif
