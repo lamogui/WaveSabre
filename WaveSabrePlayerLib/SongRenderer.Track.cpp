@@ -1,5 +1,7 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h>
 
+#include "extern/Enigma/eshared/system/system.hpp"
+
 using namespace WaveSabreCore;
 
 namespace WaveSabrePlayerLib
@@ -94,7 +96,7 @@ namespace WaveSabrePlayerLib
 
 		for (int i = 0; i < numAutomations; i++) automations[i]->Run(numSamples);
 
-		for (int i = 0; i < numBuffers; i++) memset(Buffers[i], 0, numSamples * sizeof(float));
+		for (int i = 0; i < numBuffers; i++) eMemSet(Buffers[i], 0, numSamples * sizeof(float));
 		for (int i = 0; i < NumReceives; i++)
 		{
 			Receive *r = &Receives[i];

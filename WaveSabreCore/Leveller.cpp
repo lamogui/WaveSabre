@@ -1,7 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/Leveller.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h> // TODO remove STD
 
 namespace WaveSabreCore
 {

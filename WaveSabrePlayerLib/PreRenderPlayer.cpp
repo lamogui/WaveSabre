@@ -90,20 +90,20 @@ namespace WaveSabrePlayerLib
 		int samplesLeft = player->renderBufferSize - player->playbackBufferIndex;
 		if (!samplesLeft)
 		{
-			memset(buffer, 0, numSamples * sizeof(SongRenderer::Sample));
+			eMemSet(buffer, 0, numSamples * sizeof(SongRenderer::Sample));
 			return;
 		}
 
 		int samplesToTake = min(numSamples, samplesLeft);
 		if (samplesToTake)
 		{
-			memcpy(buffer, player->renderBuffer + player->playbackBufferIndex, samplesToTake * sizeof(SongRenderer::Sample));
+			eMemCopy(buffer, player->renderBuffer + player->playbackBufferIndex, samplesToTake * sizeof(SongRenderer::Sample));
 			player->playbackBufferIndex += samplesToTake;
 		}
 		if (samplesToTake < numSamples)
 		{
 			int remainingSamples = numSamples - samplesToTake;
-			memset(buffer + samplesToTake, 0, remainingSamples * sizeof(SongRenderer::Sample));
+			eMemCopy(buffer + samplesToTake, 0, remainingSamples * sizeof(SongRenderer::Sample));
 		}
 	}
 }

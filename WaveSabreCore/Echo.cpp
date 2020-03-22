@@ -1,8 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/Echo.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h> // TODO : remove STD
-
 namespace WaveSabreCore
 {
 	Echo::Echo()

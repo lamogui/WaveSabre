@@ -1,8 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/AllPassDelay.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h>
-
 namespace WaveSabreCore
 {
 	AllPassDelay::AllPassDelay()

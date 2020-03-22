@@ -1,8 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/AllPass.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h>
-
 namespace WaveSabreCore
 {
 	AllPass::AllPass()

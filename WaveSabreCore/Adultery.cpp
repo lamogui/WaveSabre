@@ -126,12 +126,12 @@ namespace WaveSabreCore
 
 					// Read fmt chunk
 					Fmt fmt;
-					memcpy(&fmt, wave, sizeof(Fmt));
+					eMemCopy(&fmt, wave, sizeof(Fmt));
 					wave += fmt.size + 8; // size field doesn't account for tag or length fields
 
 					// Read wsmp chunk
 					Wsmp wsmp;
-					memcpy(&wsmp, wave, sizeof(Wsmp));
+					eMemCopy(&wsmp, wave, sizeof(Wsmp));
 					wave += wsmp.size + 8; // size field doesn't account for tag or length fields
 
 					// Read data chunk

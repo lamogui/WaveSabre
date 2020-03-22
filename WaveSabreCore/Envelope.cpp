@@ -1,6 +1,5 @@
 #pragma once
 
-#include <math.h> // TODO remove STD
 #include "extern/WaveSabre/WaveSabreCore/Helpers.h"
 #include "extern/WaveSabre/WaveSabreCore/Envelope.h"
 

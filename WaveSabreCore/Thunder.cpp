@@ -1,7 +1,7 @@
 #include <extern/WaveSabre/WaveSabreCore/Thunder.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h> // TODO remove STD
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -54,9 +54,9 @@ namespace WaveSabreCore
 		if (chunkData) delete [] chunkData;
 		int chunkSize = sizeof(ChunkHeader) + sizeof(WAVEFORMATEX) + ((WAVEFORMATEX *)waveFormatData)->cbSize + compressedSize + sizeof(int);
 		chunkData = new char[chunkSize];
-		memcpy(chunkData, &h, sizeof(ChunkHeader));
-		memcpy(chunkData + sizeof(ChunkHeader), waveFormatData, sizeof(WAVEFORMATEX) + ((WAVEFORMATEX *)waveFormatData)->cbSize);
-		memcpy(chunkData + sizeof(ChunkHeader) + sizeof(WAVEFORMATEX) + ((WAVEFORMATEX *)waveFormatData)->cbSize, compressedData, compressedSize);
+		eMemCopy(chunkData, &h, sizeof(ChunkHeader));
+		eMemCopy(chunkData + sizeof(ChunkHeader), waveFormatData, sizeof(WAVEFORMATEX) + ((WAVEFORMATEX *)waveFormatData)->cbSize);
+		eMemCopy(chunkData + sizeof(ChunkHeader) + sizeof(WAVEFORMATEX) + ((WAVEFORMATEX *)waveFormatData)->cbSize, compressedData, compressedSize);
 		*(int *)(chunkData + chunkSize - sizeof(int)) = chunkSize;
 		*data = chunkData;
 		return chunkSize;
@@ -69,10 +69,10 @@ namespace WaveSabreCore
 
 		if (waveFormatData) delete [] waveFormatData;
 		waveFormatData = new char[sizeof(WAVEFORMATEX) + waveFormat->cbSize];
-		memcpy(waveFormatData, waveFormat, sizeof(WAVEFORMATEX) + waveFormat->cbSize);
+		eMemCopy(waveFormatData, waveFormat, sizeof(WAVEFORMATEX) + waveFormat->cbSize);
 		if (compressedData) delete [] compressedData;
 		compressedData = new char[compressedSize];
-		memcpy(compressedData, data, compressedSize);
+		eMemCopy(compressedData, data, compressedSize);
 
 		acmDriverEnum(driverEnumCallback, NULL, NULL);
 		HACMDRIVER driver = NULL;
@@ -93,7 +93,7 @@ namespace WaveSabreCore
 		acmStreamOpen(&stream, driver, waveFormat, &dstWaveFormat, NULL, NULL, NULL, ACM_STREAMOPENF_NONREALTIME);
 
 		ACMSTREAMHEADER streamHeader;
-		memset(&streamHeader, 0, sizeof(ACMSTREAMHEADER));
+		eMemSet(&streamHeader, 0, sizeof(ACMSTREAMHEADER));
 		streamHeader.cbStruct = sizeof(ACMSTREAMHEADER);
 		streamHeader.pbSrc = (LPBYTE)compressedData;
 		streamHeader.cbSrcLength = compressedSize;
@@ -157,9 +157,9 @@ namespace WaveSabreCore
 		int waveFormatSize = 0;
 		acmMetrics(NULL, ACM_METRIC_MAX_SIZE_FORMAT, &waveFormatSize);
 		auto waveFormat = (WAVEFORMATEX *)(new char[waveFormatSize]);
-		memset(waveFormat, 0, waveFormatSize);
+		eMemSet(waveFormat, 0, waveFormatSize);
 		ACMFORMATDETAILS formatDetails;
-		memset(&formatDetails, 0, sizeof(formatDetails));
+		eMemSet(&formatDetails, 0, sizeof(formatDetails));
 		formatDetails.cbStruct = sizeof(formatDetails);
 		formatDetails.pwfx = waveFormat;
 		formatDetails.cbwfx = waveFormatSize;
