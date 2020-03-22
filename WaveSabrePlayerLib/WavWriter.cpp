@@ -6,6 +6,7 @@
 
 #include <extern/WaveSabre/WaveSabrePlayerLib/WavWriter.h>
 
+#ifndef PROUT_RELEASE
 namespace WaveSabrePlayerLib
 {
 	WavWriter::WavWriter(const SongRenderer::Song *song, int numRenderThreads)
@@ -85,3 +86,4 @@ namespace WaveSabrePlayerLib
 		fwrite(&s, sizeof(short), 1, file);
 	}
 }
+#endif // PROUT_RELEASE

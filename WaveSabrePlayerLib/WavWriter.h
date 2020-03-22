@@ -1,6 +1,8 @@
 #pragma once
 
-#include <stdio.h>
+#include "sys_builddefines.h"
+#ifndef PROUT_RELEASE
+#include <stdio.h> // TODO remove STD lib
 
 #include "extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h"
 
@@ -23,3 +25,4 @@ namespace WaveSabrePlayerLib
 		SongRenderer *songRenderer;
 	};
 }
+#endif // PROUT_RELEASE

@@ -1,7 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/Falcon.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
-
-#include <math.h>
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -234,5 +233,6 @@ namespace WaveSabreCore
 	{
 		double fineBase = (fine - .5) * 2.0;
 		return 1.0 + floor(coarse * 32.99) + fineBase * fineBase * fineBase;
+		//return 1.0 + eFloor(coarse * 32.99) + fineBase * fineBase * fineBase;
 	}
 }

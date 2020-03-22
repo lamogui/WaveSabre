@@ -1,4 +1,5 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/PreRenderPlayer.h>
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabrePlayerLib
 {
@@ -12,9 +13,12 @@ namespace WaveSabrePlayerLib
 
 		const int stepSize = 100 * SongRenderer::NumChannels;
 		renderBufferSize = (int)((double)(sampleRate * SongRenderer::NumChannels) * songRenderer.GetLength()) / stepSize * stepSize;
+		//renderBufferSize = eFtoL((double)(sampleRate * SongRenderer::NumChannels) * songRenderer.GetLength()) / stepSize * stepSize;
 		renderBuffer = new SongRenderer::Sample[renderBufferSize];
 
 		int stepCounter = 0;
+
+		this->playbackBufferSizeMs = playbackBufferSizeMs;
 
 		for (int i = 0; i < renderBufferSize; i += stepSize)
 		{
@@ -34,8 +38,6 @@ namespace WaveSabrePlayerLib
 
 		if (callback)
 			callback(1.0, data);
-
-		this->playbackBufferSizeMs = playbackBufferSizeMs;
 
 		renderThread = nullptr;
 	}

@@ -1,7 +1,7 @@
 #include <extern/WaveSabre/WaveSabreCore/Specimen.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h> // TODO remove STD
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -384,6 +384,7 @@ namespace WaveSabreCore
 	double Specimen::SpecimenVoice::coarseDetune(float detune)
 	{
 		return floor((detune * 2.0f - 1.0f) * 12.0f);
+		//return eFloor((detune * 2.0f - 1.0f) * 12.0f);
 	}
 
 	void Specimen::SpecimenVoice::calcPitch()

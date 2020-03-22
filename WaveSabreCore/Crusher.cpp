@@ -1,7 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/Crusher.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
-
-#include <math.h> // TODO remove STD lib
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -34,6 +33,7 @@ namespace WaveSabreCore
 				{
 					phase[i] -= 1.0f;
 					hold[i] = floorf(input / step + .5f) * step;
+					//hold[i] = eFloor(input / step + .5f) * step;
 				}
 
 				outputs[i][j] = Helpers::Mix(input, hold[i], dryWet);

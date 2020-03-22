@@ -1,7 +1,7 @@
 #include <extern/WaveSabre/WaveSabreCore/SamplePlayer.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h> // TODO remove STD
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -63,6 +63,8 @@ namespace WaveSabreCore
 		case LoopBoundaryMode::Manual:
 			roundedLoopStart = (int)((float)SampleLength * LoopStart);
 			roundedLoopLength = (int)((float)SampleLength * LoopLength);
+			//roundedLoopStart = eFtoL((float)SampleLength * LoopStart);
+			//roundedLoopLength = eFtoL((float)SampleLength * LoopLength);
 			break;
 		}
 
@@ -82,10 +84,10 @@ namespace WaveSabreCore
 
 	float SamplePlayer::Next()
 	{
-		double samplePosFloor = floor(samplePos);
+		double samplePosFloor = eFloor(samplePos);
 		double samplePosFract = samplePos - samplePosFloor;
 
-		int roundedSamplePos = (int)samplePosFloor;
+		int roundedSamplePos = eFtoL(samplePosFloor);
 		if (roundedSamplePos < 0 || roundedSamplePos >= SampleLength)
 		{
 			IsActive = false;

@@ -2,8 +2,9 @@
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 #include <extern/WaveSabre/WaveSabreCore/GmDls.h>
 
-#include <string.h>
-#include <math.h>
+#include "extern/Enigma/eshared/system/system.hpp"
+
+#include <string.h> // TODO remove STD
 
 typedef struct
 {
@@ -348,6 +349,7 @@ namespace WaveSabreCore
 	double Adultery::AdulteryVoice::coarseDetune(float detune)
 	{
 		return floor((detune * 2.0f - 1.0f) * 12.0f);
+		//return eFloor((detune * 2.0f - 1.0f) * 12.0f);
 	}
 
 	void Adultery::AdulteryVoice::calcPitch()

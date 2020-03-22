@@ -1,6 +1,7 @@
 #include <extern/WaveSabre/WaveSabreCore/SynthDevice.h>
 
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -252,6 +253,7 @@ namespace WaveSabreCore
 		double slideTime = 10.f * Helpers::Pow(this->SynthDevice()->Slide,4.0);
 		slideDelta = ((double)note - currentNote) / (Helpers::CurrentSampleRate * slideTime);
 		slideSamples = (int)(Helpers::CurrentSampleRate * slideTime);
+		//slideSamples = eFtoL(Helpers::CurrentSampleRate * slideTime);
 	}
 
 	double SynthDevice::Voice::GetNote()

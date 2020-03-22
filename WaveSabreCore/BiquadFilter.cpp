@@ -1,8 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/BiquadFilter.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
-
-#include <math.h>
-
+#include "extern/Enigma/eshared/system/system.hpp"
 namespace WaveSabreCore
 {
 	BiquadFilter::BiquadFilter()
@@ -77,6 +75,7 @@ namespace WaveSabreCore
 		lastInput = input;
 
 		if (fabsf(lastOutput) <= .0000001f) lastOutput = 0.0f;
+		//if (eAbs(lastOutput) <= .0000001f) lastOutput = 0.0f;
 
 		lastLastOutput = lastOutput;
 		lastOutput = output;

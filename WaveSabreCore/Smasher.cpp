@@ -1,7 +1,7 @@
 #include <extern/WaveSabre/WaveSabreCore/Smasher.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h> // TODO remove STD
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -48,6 +48,8 @@ namespace WaveSabreCore
 			float inputRight = inputs[inputChannelOffset + 1][i] * inputGainScalar;
 			float inputLeftLevel = fabsf(inputLeft);
 			float inputRightLevel = fabsf(inputRight);
+			//float inputLeftLevel = eAbs(inputLeft);
+			//float inputRightLevel = eAbs(inputRight);
 			float inputLevel = inputLeftLevel >= inputRightLevel ? inputLeftLevel : inputRightLevel;
 
 			if (inputLevel > peak)
@@ -96,6 +98,7 @@ namespace WaveSabreCore
 		case ParamIndices::Attack: return Helpers::EnvValueToScalar(attack * 5.0f); break;
 		case ParamIndices::Release: return Helpers::EnvValueToScalar(release); break;
 		case ParamIndices::Ratio: return sqrtf((ratio - 2.0f) / 18.0f);
+		//case ParamIndices::Ratio: return eSqrt((ratio - 2.0f) / 18.0f);
 		case ParamIndices::OutputGain: return Helpers::DbToParam(outputGain, 12.0f);
 		}
 		return 0.0f;

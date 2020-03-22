@@ -1,6 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/ResampleBuffer.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
-#include <math.h>
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -18,6 +18,7 @@ namespace WaveSabreCore
 	void ResampleBuffer::SetLength(float lengthMs)
 	{
 		int newLength = (int)((double)lengthMs * Helpers::CurrentSampleRate / 1000.0);
+		//int newLength = eFtoL((double)lengthMs * Helpers::CurrentSampleRate / 1000.0);
 		SetLengthSamples(newLength);
 	}
 
@@ -50,6 +51,7 @@ namespace WaveSabreCore
 	{
 		int samplePos = (currentPosition + (int)position) % length; // actual sample position determined
 		float fraction = position - floorf(position);  // fractional
+		//float fraction = position - eFloor(position);  // fractional
 		
 		float s0 = buffer[samplePos];
 		float s1 = (samplePos > 0) ? buffer[samplePos - 1] : buffer[length - 1];

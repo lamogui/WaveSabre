@@ -1,7 +1,7 @@
 #include <extern/WaveSabre/WaveSabreCore/Slaughter.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <math.h> // TODO remove STD
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -264,6 +264,8 @@ namespace WaveSabreCore
 
 		double phase2 = fmod(Phase + 2.0 * phaseMax * (double)pulseWidth, phaseMax * 2.0) - phaseMax;
 		Phase = fmod(Phase + 1.0, phaseMax * 2.0);
+		//double phase2 = eMod(Phase + 2.0 * phaseMax * (double)pulseWidth, phaseMax * 2.0) - phaseMax;
+		//Phase = eMod(Phase + 1.0, phaseMax * 2.0);
 		double tmpPhase = Phase - phaseMax;
 
 		double blit1, blit2;
@@ -287,6 +289,6 @@ namespace WaveSabreCore
 
 	double Slaughter::SlaughterVoice::coarseDetune(float detune)
 	{
-		return floor(detune * 24.99f);
+		return eFloor(detune * 24.99f);
 	}
 }

@@ -1,5 +1,5 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/DirectSoundRenderThread.h>
-
+#include "extern/Enigma/eshared/system/system.hpp"
 namespace WaveSabrePlayerLib
 {
 	DirectSoundRenderThread::DirectSoundRenderThread(RenderCallback callback, void *callbackData, int sampleRate, int bufferSizeMs)

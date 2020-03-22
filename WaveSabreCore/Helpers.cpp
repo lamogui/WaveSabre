@@ -1,8 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include <inttypes.h>
-#define _USE_MATH_DEFINES
-#include <math.h> // TODO remove STD
+#include "extern/Enigma/eshared/system/system.hpp"
 
 #if defined( _MSC_VER ) && !defined( _WIN64 ) // TODO: make assembly equivalent for x64 (use intrinsic ?)
 static __declspec(naked) double __vectorcall fpuPow(double x, double y)
@@ -133,7 +131,7 @@ namespace WaveSabreCore
 	void Helpers::Init()
 	{
 		RandomSeed = 1;
-
+		
 		for (int i = 0; i < fastCosTabSize + 1; i++)
 		{
 			double phase = double(i) * ((M_PI * 2) / fastCosTabSize);
@@ -143,6 +141,7 @@ namespace WaveSabreCore
       fastCosTab[i] = cos(phase);
 #endif // defined( _MSC_VER ) && !defined( _WIN64 )
 		}
+		
 	}
 
 	float Helpers::RandFloat()
@@ -171,6 +170,7 @@ namespace WaveSabreCore
 	double Helpers::FastCos(double x)
 	{
 		x = fabs(x); // cosine is symmetrical around 0, let's get rid of negative values
+		//x = eAbs( static_cast<float>(x) ); // cosine is symmetrical around 0, let's get rid of negative values
 
 		// normalize range from 0..2PI to 1..2
 		const auto phaseScale = 1.0 / (M_PI * 2);
@@ -237,6 +237,7 @@ namespace WaveSabreCore
 	float Helpers::EnvValueToScalar(float value)
 	{
 		return sqrtf((value - 1.0f) / 5000.0f);
+		//return eSqrt((value - 1.0f) / 5000.0f);
 	}
 
 	float Helpers::ScalarToEnvValue(float scalar)
@@ -253,6 +254,7 @@ namespace WaveSabreCore
 	float Helpers::ScalarToVolume(float scalar)
 	{
 		return sqrtf(scalar) / .4f;
+		//return eSqrt(scalar) / .4f;
 	}
 
 	bool Helpers::ParamToBoolean(float value)
@@ -273,6 +275,7 @@ namespace WaveSabreCore
 	float Helpers::FrequencyToParam(float freq)
 	{
 		return sqrtf((freq - 20.0f) / (20000.0f - 20.0f));
+		//return eSqrt((freq - 20.0f) / (20000.0f - 20.0f));
 	}
 
 	float Helpers::ParamToQ(float param)
@@ -348,16 +351,19 @@ namespace WaveSabreCore
 	{
 		double d = vf / 70.0 - .1;
 		return d >= 0.0 ? (float)sqrt(d) : 0.0f;
+		//return d >= 0.0 ? (float)eSqrt(d) : 0.0f;
 	}
 
 	float Helpers::PanToScalarLeft(float pan)
 	{
 		return sqrtf(1.0f - pan);
+		//return eSqrt(1.0f - pan);
 	}
 
 	float Helpers::PanToScalarRight(float pan)
 	{
 		return sqrtf(pan);
+		//return eSqrt(pan);
 	}
 
 	Spread Helpers::ParamToSpread(float param)

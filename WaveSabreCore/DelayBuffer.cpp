@@ -1,6 +1,8 @@
 #include <extern/WaveSabre/WaveSabreCore/DelayBuffer.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
+#include "extern/Enigma/eshared/system/system.hpp"
+
 namespace WaveSabreCore
 {
 	DelayBuffer::DelayBuffer(float lengthMs)
@@ -17,6 +19,7 @@ namespace WaveSabreCore
 	void DelayBuffer::SetLength(float lengthMs)
 	{
 		int newLength = (int)((double)lengthMs * Helpers::CurrentSampleRate / 1000.0);
+		//int newLength = eFtoL((double)lengthMs * Helpers::CurrentSampleRate / 1000.0);
 		if (newLength < 1) newLength = 1;
 		if (newLength != length || !buffer)
 		{
