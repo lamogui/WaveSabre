@@ -95,8 +95,7 @@ namespace WaveSabreCore
 		case ParamIndices::Threshold: return Helpers::DbToParam(threshold, 36.0f) * 2.0f;
 		case ParamIndices::Attack: return Helpers::EnvValueToScalar(attack * 5.0f); break;
 		case ParamIndices::Release: return Helpers::EnvValueToScalar(release); break;
-		case ParamIndices::Ratio: return sqrtf((ratio - 2.0f) / 18.0f);
-		//case ParamIndices::Ratio: return eSqrt((ratio - 2.0f) / 18.0f);
+		case ParamIndices::Ratio: return eSqrt((ratio - 2.0f) / 18.0f);
 		case ParamIndices::OutputGain: return Helpers::DbToParam(outputGain, 12.0f);
 		}
 		return 0.0f;

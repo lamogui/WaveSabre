@@ -32,8 +32,7 @@ namespace WaveSabreCore
 				if (phase[i] >= 1.0f)
 				{
 					phase[i] -= 1.0f;
-					hold[i] = floorf(input / step + .5f) * step;
-					//hold[i] = eFloor(input / step + .5f) * step;
+					hold[i] = eFloor(input / step + .5f) * step;
 				}
 
 				outputs[i][j] = Helpers::Mix(input, hold[i], dryWet);

@@ -232,7 +232,6 @@ namespace WaveSabreCore
 	double Falcon::ratioScalar(double coarse, double fine)
 	{
 		double fineBase = (fine - .5) * 2.0;
-		return 1.0 + floor(coarse * 32.99) + fineBase * fineBase * fineBase;
-		//return 1.0 + eFloor(coarse * 32.99) + fineBase * fineBase * fineBase;
+		return 1.0 + eFloor(coarse * 32.99) + fineBase * fineBase * fineBase;
 	}
 }

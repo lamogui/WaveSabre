@@ -348,8 +348,7 @@ namespace WaveSabreCore
 
 	double Adultery::AdulteryVoice::coarseDetune(float detune)
 	{
-		return floor((detune * 2.0f - 1.0f) * 12.0f);
-		//return eFloor((detune * 2.0f - 1.0f) * 12.0f);
+		return eFloor((detune * 2.0f - 1.0f) * 12.0f);
 	}
 
 	void Adultery::AdulteryVoice::calcPitch()

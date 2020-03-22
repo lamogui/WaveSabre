@@ -50,8 +50,7 @@ namespace WaveSabreCore
 	float ResampleBuffer::ReadPosition(float position) const
 	{
 		int samplePos = (currentPosition + (int)position) % length; // actual sample position determined
-		float fraction = position - floorf(position);  // fractional
-		//float fraction = position - eFloor(position);  // fractional
+		float fraction = position - eFloor(position);  // fractional
 		
 		float s0 = buffer[samplePos];
 		float s1 = (samplePos > 0) ? buffer[samplePos - 1] : buffer[length - 1];

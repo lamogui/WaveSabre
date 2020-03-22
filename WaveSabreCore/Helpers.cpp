@@ -235,8 +235,7 @@ namespace WaveSabreCore
 
 	float Helpers::EnvValueToScalar(float value)
 	{
-		return sqrtf((value - 1.0f) / 5000.0f);
-		//return eSqrt((value - 1.0f) / 5000.0f);
+		return eSqrt((value - 1.0f) / 5000.0f);
 	}
 
 	float Helpers::ScalarToEnvValue(float scalar)
@@ -252,8 +251,7 @@ namespace WaveSabreCore
 
 	float Helpers::ScalarToVolume(float scalar)
 	{
-		return sqrtf(scalar) / .4f;
-		//return eSqrt(scalar) / .4f;
+		return eSqrt(scalar) / .4f;
 	}
 
 	bool Helpers::ParamToBoolean(float value)
@@ -273,8 +271,7 @@ namespace WaveSabreCore
 
 	float Helpers::FrequencyToParam(float freq)
 	{
-		return sqrtf((freq - 20.0f) / (20000.0f - 20.0f));
-		//return eSqrt((freq - 20.0f) / (20000.0f - 20.0f));
+		return eSqrt((freq - 20.0f) / (20000.0f - 20.0f));
 	}
 
 	float Helpers::ParamToQ(float param)
@@ -349,20 +346,17 @@ namespace WaveSabreCore
 	float Helpers::VibratoFreqToParam(double vf)
 	{
 		double d = vf / 70.0 - .1;
-		return d >= 0.0 ? (float)sqrt(d) : 0.0f;
-		//return d >= 0.0 ? (float)eSqrt(d) : 0.0f;
+		return d >= 0.0 ? eSqrt((float)d) : 0.0f;
 	}
 
 	float Helpers::PanToScalarLeft(float pan)
 	{
-		return sqrtf(1.0f - pan);
-		//return eSqrt(1.0f - pan);
+		return eSqrt(1.0f - pan);
 	}
 
 	float Helpers::PanToScalarRight(float pan)
 	{
-		return sqrtf(pan);
-		//return eSqrt(pan);
+		return eSqrt(pan);
 	}
 
 	Spread Helpers::ParamToSpread(float param)
