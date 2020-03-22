@@ -46,10 +46,8 @@ namespace WaveSabreCore
 			rightBuffer.WriteSample(inputs[1][i] * inputGainScalar);
 			float inputLeft = inputs[inputChannelOffset][i] * inputGainScalar;
 			float inputRight = inputs[inputChannelOffset + 1][i] * inputGainScalar;
-			float inputLeftLevel = fabsf(inputLeft);
-			float inputRightLevel = fabsf(inputRight);
-			//float inputLeftLevel = eAbs(inputLeft);
-			//float inputRightLevel = eAbs(inputRight);
+			float inputLeftLevel = eAbs(inputLeft);
+			float inputRightLevel = eAbs(inputRight);
 			float inputLevel = inputLeftLevel >= inputRightLevel ? inputLeftLevel : inputRightLevel;
 
 			if (inputLevel > peak)

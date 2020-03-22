@@ -169,8 +169,7 @@ namespace WaveSabreCore
 
 	double Helpers::FastCos(double x)
 	{
-		x = fabs(x); // cosine is symmetrical around 0, let's get rid of negative values
-		//x = eAbs( static_cast<float>(x) ); // cosine is symmetrical around 0, let's get rid of negative values
+		x = eAbs( x ); // cosine is symmetrical around 0, let's get rid of negative values
 
 		// normalize range from 0..2PI to 1..2
 		const auto phaseScale = 1.0 / (M_PI * 2);
