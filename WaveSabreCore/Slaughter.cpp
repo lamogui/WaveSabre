@@ -262,10 +262,8 @@ namespace WaveSabreCore
 		double phaseMax = Helpers::CurrentSampleRate * .5 / Helpers::NoteToFreq(note);
 		double dcOffset = -.498 / phaseMax;
 
-		double phase2 = fmod(Phase + 2.0 * phaseMax * (double)pulseWidth, phaseMax * 2.0) - phaseMax;
-		Phase = fmod(Phase + 1.0, phaseMax * 2.0);
-		//double phase2 = eMod(Phase + 2.0 * phaseMax * (double)pulseWidth, phaseMax * 2.0) - phaseMax;
-		//Phase = eMod(Phase + 1.0, phaseMax * 2.0);
+		double phase2 = eMod(Phase + 2.0 * phaseMax * (double)pulseWidth, phaseMax * 2.0) - phaseMax;
+		Phase = eMod(Phase + 1.0, phaseMax * 2.0);
 		double tmpPhase = Phase - phaseMax;
 
 		double blit1, blit2;
