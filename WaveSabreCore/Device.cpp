@@ -1,5 +1,6 @@
 #include <extern/WaveSabre/WaveSabreCore/Device.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
+#include "extern/Enigma/eshared/system/system.hpp"
 
 namespace WaveSabreCore
 {
@@ -67,7 +68,8 @@ namespace WaveSabreCore
 	{
 		for (int i = 0; i < 2; i++)
 		{
-			for (int j = 0; j < numSamples; j++) outputs[i][j] = 0.0f;
+			//for (int j = 0; j < numSamples; j++) outputs[i][j] = 0.0f;
+			eMemSet(&outputs[i][0], 0, numSamples * sizeof(float));
 		}
 	}
 }

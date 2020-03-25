@@ -44,12 +44,12 @@ namespace WaveSabrePlayerLib
 			currentBytesRendered = bytesRendered;
 		}
 
-		long long totalBytesRead = playCursorPos - currentOldPlayCursorPos;
+		int totalBytesRead = playCursorPos - currentOldPlayCursorPos;
 		if (totalBytesRead < 0)
 			totalBytesRead += bufferSizeBytes;
 		totalBytesRead += currentBytesRendered;
 
-		return (int)(totalBytesRead / SongRenderer::BlockAlign * 1000 / sampleRate);
+		return (totalBytesRead / SongRenderer::BlockAlign * 1000 / sampleRate);
 	}
 
 	DWORD WINAPI DirectSoundRenderThread::threadProc(LPVOID lpParameter)

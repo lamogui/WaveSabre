@@ -74,7 +74,7 @@ namespace WaveSabreCore
 
 		enum class EventType
 		{
-			None,
+			None = 0,
 			NoteOn,
 			NoteOff,
 		};

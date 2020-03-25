@@ -134,7 +134,7 @@ namespace WaveSabreCore
 		
 		for (int i = 0; i < fastCosTabSize + 1; i++)
 		{
-			double phase = double(i) * ((M_PI * 2) / fastCosTabSize);
+			double phase = double(i) * ((ePI * 2) / fastCosTabSize);
 #if defined( _MSC_VER ) && !defined( _WIN64 )
 			fastCosTab[i] = fpuCos(phase);
 #else 
@@ -169,6 +169,7 @@ namespace WaveSabreCore
 
 	double Helpers::FastCos(double x)
 	{
+		return fpuCos(x);/*
 		x = eAbs( x ); // cosine is symmetrical around 0, let's get rid of negative values
 
 		// normalize range from 0..2PI to 1..2
@@ -191,11 +192,12 @@ namespace WaveSabreCore
 
 		auto fractMix = fract * (1.0 / fractScale);
 		return left + (right - left) * fractMix;
+		*/
 	}
 
 	double Helpers::FastSin(double x)
 	{
-		return FastCos(x - M_PI_2);
+		return FastCos(x - eHALFPI);
 	}
 
 	double Helpers::Square135(double phase)

@@ -22,11 +22,8 @@ namespace WaveSabreCore
 		monoActive = false;
 		noteCount = 0;
 
-		for (int i = 0; i < maxActiveNotes; i++)
-		{
-			activeNotes[i] = false;
-			noteLog[i] = 0;
-		}
+		eMemSet(&activeNotes[0], 0, sizeof(activeNotes));
+		eMemSet(&noteLog[0], 0, sizeof(noteLog));
 
 		clearEvents();
 	}
@@ -134,7 +131,7 @@ namespace WaveSabreCore
 									if (noteCount == 0)   // no notes left, switch off the voices
 									{
 										monoActive = false;
-										for (int j = 0; j < maxActiveNotes; j++) activeNotes[j] = false;
+										eMemSet(&activeNotes[0], 0, sizeof(activeNotes));
 										for (int j = 0; j < maxVoices; j++)
 										{
 											if (voices[j]->IsOn)
@@ -177,7 +174,8 @@ namespace WaveSabreCore
 		}
 		monoActive = false;
 		noteCount = 0;
-		for (int i = 0; i < maxActiveNotes; i++) activeNotes[i] = false;
+
+		eMemSet(&activeNotes[0], 0, sizeof(activeNotes));
 		clearEvents();
 	}
 
