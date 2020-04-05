@@ -1,8 +1,10 @@
+
+#include "extern/Enigma/eshared/system/types.hpp"
+#include "extern/Enigma/eshared/system/runtime.hpp"
+
 #include <extern/WaveSabre/WaveSabreCore/Adultery.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 #include <extern/WaveSabre/WaveSabreCore/GmDls.h>
-
-#include "extern/Enigma/eshared/system/system.hpp"
 
 #include <string.h> // TODO remove STD
 

@@ -1,6 +1,7 @@
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include "extern/Enigma/eshared/system/system.hpp"
+#include "extern/Enigma/eshared/system/types.hpp"
+#include "extern/Enigma/eshared/system/runtime.hpp"
 
 #if defined( _MSC_VER ) && !defined( _WIN64 ) // TODO: make assembly equivalent for x64 (use intrinsic ?)
 static __declspec(naked) double __vectorcall fpuPow(double x, double y)

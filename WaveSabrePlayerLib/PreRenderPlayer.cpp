@@ -1,5 +1,7 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/PreRenderPlayer.h>
-#include "extern/Enigma/eshared/system/system.hpp"
+
+#include "extern/Enigma/eshared/system/types.hpp"
+#include "extern/Enigma/eshared/system/runtime.hpp"
 
 namespace WaveSabrePlayerLib
 {

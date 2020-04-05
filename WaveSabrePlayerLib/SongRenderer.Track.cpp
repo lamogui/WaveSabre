@@ -1,6 +1,7 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h>
 
-#include "extern/Enigma/eshared/system/system.hpp"
+#include "extern/Enigma/eshared/system/types.hpp"
+#include "extern/Enigma/eshared/system/runtime.hpp"
 
 using namespace WaveSabreCore;
 
