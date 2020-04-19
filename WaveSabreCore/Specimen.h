@@ -1,15 +1,12 @@
 #pragma once
 
-#include "sys_builddefines.h"
-#ifdef PROUT_WIN32
-	#include "platforms/win32/sys_win32.h"
-	#include <mmreg.h>
-	#ifdef UNICODE
-		#define _UNICODE
-	#endif
-	typedef DWORD	FOURCC;
-	#include <MSAcm.h>
-#endif 
+#include "platforms/win32/sys_win32.h"
+#include <mmreg.h>
+#ifdef UNICODE
+	#define _UNICODE
+#endif
+typedef DWORD	FOURCC;
+#include <MSAcm.h>
 
 #include "extern/WaveSabre/WaveSabreCore/SynthDevice.h"
 #include "extern/WaveSabre/WaveSabreCore/Envelope.h"
