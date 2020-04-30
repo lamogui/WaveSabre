@@ -1,6 +1,7 @@
 #pragma once
 
-#include "sys_builddefines.h"
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 #ifndef PROUT_RELEASE
 #include <stdio.h> // TODO remove STD lib
 
@@ -26,3 +27,4 @@ namespace WaveSabrePlayerLib
 	};
 }
 #endif // PROUT_RELEASE
+#endif // PROUT_WAVESABRE

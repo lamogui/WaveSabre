@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 namespace WaveSabreCore
 {
 	class AllPass
@@ -22,3 +25,4 @@ namespace WaveSabreCore
 }
 
 
+#endif // PROUT_WAVESABRE

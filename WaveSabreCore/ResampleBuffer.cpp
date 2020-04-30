@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/ResampleBuffer.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
@@ -59,3 +62,4 @@ namespace WaveSabreCore
 		return s0 + fraction * (s1 - s0);
 	}
 }
+#endif // PROUT_WAVESABRE

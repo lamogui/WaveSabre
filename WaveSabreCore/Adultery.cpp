@@ -1,3 +1,5 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 
 #include "extern/Enigma/eshared/system/types.hpp"
 #include "extern/Enigma/eshared/system/runtime.hpp"
@@ -358,3 +360,5 @@ namespace WaveSabreCore
 		samplePlayer.CalcPitch(GetNote() - 60 + Detune + adultery->fineTune * 2.0f - 1.0f + AdulteryVoice::coarseDetune(adultery->coarseTune));
 	}
 }
+
+#endif // PROUT_WAVESABRE

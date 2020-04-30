@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "extern/WaveSabre/WaveSabreCore/SynthDevice.h"
 #include "extern/WaveSabre/WaveSabreCore/Envelope.h"
 #include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
@@ -118,3 +121,5 @@ namespace WaveSabreCore
 		float masterLevel;
 	};
 }
+
+#endif // PROUT_WAVESABRE

@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/BiquadFilter.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
@@ -121,3 +124,5 @@ namespace WaveSabreCore
 		recalculate = true;
 	}
 }
+
+#endif // PROUT_WAVESABRE

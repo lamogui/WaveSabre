@@ -1,5 +1,5 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/RealtimePlayer.h>
-
+#ifdef PROUT_WAVESABRE
 namespace WaveSabrePlayerLib
 {
 	RealtimePlayer::RealtimePlayer(const SongRenderer::Song *song, int numRenderThreads, int bufferSizeMs)
@@ -61,3 +61,4 @@ namespace WaveSabrePlayerLib
 			player->songRenderer->RenderSamples(buffer + i, min(numSamples - i, stepSize));
 	}
 }
+#endif // PROUT_WAVESABRE

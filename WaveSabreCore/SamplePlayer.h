@@ -1,4 +1,6 @@
 #pragma once
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 
 namespace WaveSabreCore
 {
@@ -57,3 +59,5 @@ namespace WaveSabreCore
 		bool reverse;
 	};
 }
+
+#endif // PROUT_WAVESABRE

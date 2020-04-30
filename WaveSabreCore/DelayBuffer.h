@@ -1,4 +1,7 @@
 #pragma once
+
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 namespace WaveSabreCore
 {
 	class DelayBuffer
@@ -18,3 +21,5 @@ namespace WaveSabreCore
 		int currentPosition;
 	};
 }
+
+#endif // PROUT_WAVESABRE

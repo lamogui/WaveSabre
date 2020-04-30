@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "platforms/win32/sys_win32.h"
 #include <mmreg.h>
 
@@ -60,3 +63,5 @@ namespace WaveSabreCore
 		int sampleLength;
 	};
 }
+
+#endif // PROUT_WAVESABRE

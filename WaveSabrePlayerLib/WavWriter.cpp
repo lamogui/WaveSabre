@@ -1,7 +1,8 @@
 
-#include "platforms/win32/sys_win32.h"
-
 #include <extern/WaveSabre/WaveSabrePlayerLib/WavWriter.h>
+#ifdef PROUT_WAVESABRE
+
+#include "platforms/win32/sys_win32.h"
 
 #ifndef PROUT_RELEASE
 namespace WaveSabrePlayerLib
@@ -84,3 +85,4 @@ namespace WaveSabrePlayerLib
 	}
 }
 #endif // PROUT_RELEASE
+#endif // PROUT_WAVESABRE

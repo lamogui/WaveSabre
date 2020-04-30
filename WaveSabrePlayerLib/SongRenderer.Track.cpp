@@ -1,5 +1,7 @@
-#include <extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h>
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 
+#include <extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h>
 #include "extern/Enigma/eshared/system/types.hpp"
 #include "extern/Enigma/eshared/system/runtime.hpp"
 
@@ -169,3 +171,5 @@ namespace WaveSabrePlayerLib
 		samplePos += numSamples;
 	}
 }
+
+#endif // PROUT_WAVESABRE

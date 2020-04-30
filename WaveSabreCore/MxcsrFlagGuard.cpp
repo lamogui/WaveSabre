@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/MxcsrFlagGuard.h>
 
 #include <xmmintrin.h>
@@ -19,3 +22,5 @@ namespace WaveSabreCore
 		_mm_setcsr(mxcsrRestore);
 	}
 }
+
+#endif // PROUT_WAVESABRE

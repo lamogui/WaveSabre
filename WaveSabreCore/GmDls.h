@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 namespace WaveSabreCore
 {
 	class GmDls
@@ -12,3 +15,4 @@ namespace WaveSabreCore
 	};
 }
 
+#endif // PROUT_WAVESABRE

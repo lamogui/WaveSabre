@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/Specimen.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
@@ -429,3 +432,5 @@ namespace WaveSabreCore
 		return 1;
 	}
 }
+
+#endif // PROUT_WAVESABRE

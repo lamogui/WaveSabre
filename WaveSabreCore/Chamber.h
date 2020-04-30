@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "extern/WaveSabre/WaveSabreCore/Device.h"
 #include "extern/WaveSabre/WaveSabreCore/DelayBuffer.h"
 #include "extern/WaveSabre/WaveSabreCore/StateVariableFilter.h"
@@ -50,3 +53,4 @@ namespace WaveSabreCore
 	};
 }
 
+#endif // PROUT_WAVESABRE

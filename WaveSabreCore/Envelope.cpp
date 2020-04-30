@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "extern/WaveSabre/WaveSabreCore/Helpers.h"
 #include "extern/WaveSabre/WaveSabreCore/Envelope.h"
 
@@ -82,3 +85,5 @@ namespace WaveSabreCore
 		}
 	}
 }
+
+#endif // PROUT_WAVESABRE

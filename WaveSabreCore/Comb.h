@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 namespace WaveSabreCore
 {
 	class Comb
@@ -23,3 +26,4 @@ namespace WaveSabreCore
 	};
 }
 
+#endif // PROUT_WAVESABRE

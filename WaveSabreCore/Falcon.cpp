@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/Falcon.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 #include "extern/Enigma/eshared/system/types.hpp"
@@ -236,3 +239,5 @@ namespace WaveSabreCore
 		return 1.0 + eFloor(coarse * 32.99) + fineBase * fineBase * fineBase;
 	}
 }
+
+#endif // PROUT_WAVESABRE

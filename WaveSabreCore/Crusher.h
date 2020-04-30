@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "extern/WaveSabre/WaveSabreCore/Device.h"
 
 namespace WaveSabreCore
@@ -32,3 +35,5 @@ namespace WaveSabreCore
 		float hold[2];
 	};
 }
+
+#endif // PROUT_WAVESABRE

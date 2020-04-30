@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 namespace WaveSabreCore
 {
 	enum class BiquadFilterType
@@ -35,3 +38,5 @@ namespace WaveSabreCore
 		float lastOutput, lastLastOutput;
 	};
 }
+
+#endif // PROUT_WAVESABRE

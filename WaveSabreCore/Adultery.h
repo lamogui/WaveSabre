@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "SynthDevice.h"
 #include "Envelope.h"
 #include "StateVariableFilter.h"
@@ -107,3 +110,5 @@ namespace WaveSabreCore
 		float modAttack, modDecay, modSustain, modRelease;
 	};
 }
+
+#endif // PROUT_WAVESABRE

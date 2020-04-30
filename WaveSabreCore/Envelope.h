@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 namespace WaveSabreCore
 {
 	enum class EnvelopeState
@@ -32,3 +35,4 @@ namespace WaveSabreCore
 	};
 }
 
+#endif // PROUT_WAVESABRE

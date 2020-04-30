@@ -1,3 +1,5 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 
 #include "platforms/win32/sys_win32.h"
 
@@ -30,3 +32,4 @@ namespace WaveSabreCore
 		return gmDls;
 	}
 }
+#endif // PROUT_WAVESABRE

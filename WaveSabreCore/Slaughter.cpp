@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/Slaughter.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
@@ -291,3 +294,5 @@ namespace WaveSabreCore
 		return eFloor(detune * 24.99f);
 	}
 }
+
+#endif // PROUT_WAVESABRE

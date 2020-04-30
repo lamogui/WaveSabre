@@ -1,6 +1,9 @@
 #include <extern/WaveSabre/WaveSabreCore/Thunder.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "extern/Enigma/eshared/system/types.hpp"
 #include "extern/Enigma/eshared/system/runtime.hpp"
 
@@ -185,3 +188,5 @@ namespace WaveSabreCore
 		return 1;
 	}
 }
+
+#endif // PROUT_WAVESABRE

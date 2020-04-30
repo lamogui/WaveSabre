@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/DelayBuffer.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
@@ -45,3 +48,4 @@ namespace WaveSabreCore
 		return buffer[currentPosition];
 	}
 }
+#endif // PROUT_WAVESABRE

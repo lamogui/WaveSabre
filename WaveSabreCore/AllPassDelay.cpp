@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/AllPassDelay.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
@@ -22,3 +25,5 @@ namespace WaveSabreCore
 		return y;
 	}
 }
+
+#endif // PROUT_WAVESABRE

@@ -1,4 +1,7 @@
 #pragma once
+
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 namespace WaveSabreCore
 {
 	class Device
@@ -29,3 +32,5 @@ namespace WaveSabreCore
 		void *chunkData;
 	};
 }
+
+#endif // PROUT_WAVESABRE

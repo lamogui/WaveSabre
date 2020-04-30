@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "extern/WaveSabre/WaveSabreCore/Device.h"
 #include "extern/WaveSabre/WaveSabreCore/BiquadFilter.h"
 
@@ -55,3 +58,5 @@ namespace WaveSabreCore
 		BiquadFilter lowpass[2];
 	};
 }
+
+#endif // PROUT_WAVESABRE

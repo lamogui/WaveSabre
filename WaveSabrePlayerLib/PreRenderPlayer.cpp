@@ -1,5 +1,6 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/PreRenderPlayer.h>
 
+#ifdef PROUT_WAVESABRE
 #include "extern/Enigma/eshared/system/types.hpp"
 #include "extern/Enigma/eshared/system/runtime.hpp"
 
@@ -109,3 +110,4 @@ namespace WaveSabrePlayerLib
 		}
 	}
 }
+#endif // PROUT_WAVESABRE

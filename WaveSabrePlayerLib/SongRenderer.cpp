@@ -1,5 +1,6 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h>
 
+#ifdef PROUT_WAVESABRE
 using namespace WaveSabreCore;
 
 namespace WaveSabrePlayerLib
@@ -253,3 +254,4 @@ namespace WaveSabrePlayerLib
 		return ret;
 	}
 }
+#endif // PROUT_WAVESABRE

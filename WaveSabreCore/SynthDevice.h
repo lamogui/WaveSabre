@@ -1,5 +1,7 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 #include "extern/WaveSabre/WaveSabreCore/Device.h"
 
 namespace WaveSabreCore
@@ -99,3 +101,4 @@ namespace WaveSabreCore
 		Event events[maxEvents];
 	};
 }
+#endif // PROUT_WAVESABRE

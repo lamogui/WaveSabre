@@ -1,6 +1,9 @@
 #include <extern/WaveSabre/WaveSabreCore/Twister.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 int const lookAhead = 4;
 
 namespace WaveSabreCore
@@ -181,3 +184,5 @@ namespace WaveSabreCore
 		}
 	}
 }
+
+#endif // PROUT_WAVESABRE

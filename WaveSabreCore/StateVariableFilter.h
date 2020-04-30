@@ -1,5 +1,7 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 namespace WaveSabreCore
 {
 	enum class StateVariableFilterType
@@ -36,3 +38,4 @@ namespace WaveSabreCore
 		float f;
 	};
 }
+#endif // PROUT_WAVESABRE

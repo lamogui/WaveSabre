@@ -1,12 +1,13 @@
 #pragma once
-
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 #include "extern/WaveSabre/WaveSabrePlayerLib/IPlayer.h"
 #include "extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h"
 #include "extern/WaveSabre/WaveSabrePlayerLib/DirectSoundRenderThread.h"
 
 namespace WaveSabrePlayerLib
 {
-	class RealtimePlayer : public IPlayer
+	class RealtimePlayer 
 	{
 	public:
 		RealtimePlayer(const SongRenderer::Song *song, int numRenderThreads, int bufferSizeMs = 1000);
@@ -30,3 +31,4 @@ namespace WaveSabrePlayerLib
 		DirectSoundRenderThread *renderThread;
 	};
 }
+#endif // PROUT_WAVESABRE

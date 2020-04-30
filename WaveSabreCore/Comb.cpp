@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/Comb.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
@@ -63,3 +66,4 @@ namespace WaveSabreCore
 		return output;
 	}
 }
+#endif // PROUT_WAVESABRE

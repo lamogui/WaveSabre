@@ -1,12 +1,15 @@
 #pragma once
 
+
 #include "extern/WaveSabre/WaveSabrePlayerLib/IPlayer.h"
 #include "extern/WaveSabre/WaveSabrePlayerLib/SongRenderer.h"
 #include "extern/WaveSabre/WaveSabrePlayerLib/DirectSoundRenderThread.h"
 
+#ifdef PROUT_WAVESABRE
+
 namespace WaveSabrePlayerLib
 {
-	class PreRenderPlayer : public IPlayer
+	class PreRenderPlayer 
 	{
 	public:
 		typedef void (*ProgressCallback)(double progress, void *data);
@@ -37,3 +40,4 @@ namespace WaveSabrePlayerLib
 		DirectSoundRenderThread *renderThread;
 	};
 }
+#endif // PROUT_WAVESABRE

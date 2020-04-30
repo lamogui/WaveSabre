@@ -1,6 +1,8 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/Leveller.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
-
 
 namespace WaveSabreCore
 {
@@ -128,3 +130,5 @@ namespace WaveSabreCore
 		}
 	}
 }
+
+#endif // PROUT_WAVESABRE

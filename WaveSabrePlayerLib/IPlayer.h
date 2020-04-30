@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 namespace WaveSabrePlayerLib
 {
 	class IPlayer
@@ -15,3 +18,4 @@ namespace WaveSabrePlayerLib
 		virtual double GetSongPos() const = 0;
 	};
 }
+#endif // PROUT_WAVESABRE

@@ -1,6 +1,6 @@
 #pragma once
-
-#include "CriticalSection.h"
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 
 #include <extern/WaveSabre/WaveSabreCore.h>
 
@@ -192,3 +192,4 @@ namespace WaveSabrePlayerLib
 		HANDLE renderDoneEvent;
 	};
 }
+#endif // PROUT_WAVESABRE

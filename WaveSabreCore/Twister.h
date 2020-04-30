@@ -1,4 +1,8 @@
 #pragma once
+
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "extern/WaveSabre/WaveSabreCore/Device.h"
 #include "extern/WaveSabre/WaveSabreCore/ResampleBuffer.h"
 #include "extern/WaveSabre/WaveSabreCore/AllPassDelay.h"
@@ -67,3 +71,4 @@ namespace WaveSabreCore
 		StateVariableFilter lowCutFilter[2], highCutFilter[2];
 	};
 }
+#endif // PROUT_WAVESABRE

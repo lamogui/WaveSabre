@@ -1,5 +1,8 @@
 #pragma once
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include "platforms/win32/sys_win32.h"
 #include <mmreg.h>
 #ifdef UNICODE
@@ -131,4 +134,4 @@ namespace WaveSabreCore
 		float modAttack, modDecay, modSustain, modRelease;
 	};
 }
-
+#endif // PROUT_WAVESABRE

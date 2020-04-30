@@ -1,7 +1,8 @@
 #include <extern/WaveSabre/WaveSabreCore/StateVariableFilter.h>
 
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
-
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
 
 namespace WaveSabreCore
 {
@@ -75,3 +76,5 @@ namespace WaveSabreCore
 		}
 	}
 }
+
+#endif // PROUT_WAVESABRE

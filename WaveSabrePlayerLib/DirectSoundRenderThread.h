@@ -1,9 +1,10 @@
 #pragma once
 
-#include "platforms/win32/sys_win32.h"
-
 #include "SongRenderer.h"
-#include "CriticalSection.h"
+#ifdef PROUT_WAVESABRE
+
+#include "system/sys_mutex.hpp"
+#include "platforms/win32/sys_win32.h"
 
 #include <dsound.h>
 
@@ -29,8 +30,8 @@ namespace WaveSabrePlayerLib
 		int bufferSizeBytes;
 
 		HANDLE thread;
-		CriticalSection criticalSection;
-		CriticalSection playPositionCriticalSection;
+		pMutex criticalSection;
+		pMutex playPositionCriticalSection;
 		bool shutdown;
 
 		int oldPlayCursorPos;
@@ -38,3 +39,5 @@ namespace WaveSabrePlayerLib
 		LPDIRECTSOUNDBUFFER buffer;
 	};
 }
+
+#endif // PROUT_WAVESABRE

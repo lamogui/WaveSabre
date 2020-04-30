@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
 #include "extern/Enigma/eshared/system/types.hpp"
@@ -382,3 +385,4 @@ namespace WaveSabreCore
 		return (float)voiceMode / 1.0f;
 	}
 }
+#endif // PROUT_WAVESABRE

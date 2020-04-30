@@ -1,6 +1,9 @@
 #include <extern/WaveSabre/WaveSabreCore/Scissor.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 namespace WaveSabreCore
 {
 	Scissor::Scissor()
@@ -123,3 +126,4 @@ namespace WaveSabreCore
 		return v;
 	}
 }
+#endif // PROUT_WAVESABRE

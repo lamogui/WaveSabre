@@ -1,5 +1,6 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/DirectSoundRenderThread.h>
 
+#ifdef PROUT_WAVESABRE
 #include "extern/Enigma/eshared/system/types.hpp"
 #include "extern/Enigma/eshared/system/runtime.hpp"
 
@@ -41,7 +42,7 @@ namespace WaveSabrePlayerLib
 		long long currentBytesRendered;
 
 		{
-			auto playPositionCriticalSectionGuard = playPositionCriticalSection.Enter();
+			pScopedLock playPositionCriticalSectionGuard( playPositionCriticalSection );
 
 			currentOldPlayCursorPos = oldPlayCursorPos;
 			currentBytesRendered = bytesRendered;
@@ -93,7 +94,7 @@ namespace WaveSabrePlayerLib
 		while (!renderThread->shutdown)
 		{
 			{
-				auto criticalSectionGuard = renderThread->criticalSection.Enter();
+				pScopedLock criticalSectionGuard(renderThread->criticalSection );
 
 				int playCursorPos;
 				renderThread->buffer->GetCurrentPosition((LPDWORD)&playCursorPos, 0);
@@ -110,7 +111,7 @@ namespace WaveSabrePlayerLib
 						if (b2) renderThread->callback(p2, b2 / sizeof(SongRenderer::Sample), renderThread->callbackData);
 						renderThread->buffer->Unlock(p1, b1, p2, b2);
 
-						auto playPositionCriticalSectionGuard = renderThread->playPositionCriticalSection.Enter();
+						pScopedLock playPositionCriticalSectionGuard( renderThread->playPositionCriticalSection );
 
 						renderThread->oldPlayCursorPos = playCursorPos;
 						renderThread->bytesRendered += bytesToRender;
@@ -128,3 +129,4 @@ namespace WaveSabrePlayerLib
 		return 0;
 	}
 }
+#endif // PROUT_WAVESABRE

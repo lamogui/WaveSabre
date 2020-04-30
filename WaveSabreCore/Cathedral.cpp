@@ -1,3 +1,6 @@
+#include "sys_buildfeatures.h"
+#ifdef PROUT_WAVESABRE
+
 #include <extern/WaveSabre/WaveSabreCore/Cathedral.h>
 #include <extern/WaveSabre/WaveSabreCore/AllPass.h>
 #include <extern/WaveSabre/WaveSabreCore/Comb.h>
@@ -158,3 +161,4 @@ namespace WaveSabreCore
 		}
 	}
 }
+#endif // PROUT_WAVESABRE
