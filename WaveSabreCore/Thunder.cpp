@@ -4,8 +4,8 @@
 #include "sys_buildfeatures.h"
 #ifdef PROUT_WAVESABRE
 
-#include "extern/Enigma/eshared/system/types.hpp"
-#include "extern/Enigma/eshared/system/runtime.hpp"
+#include "system/types.hpp"
+#include "system/memory.hpp"
 
 namespace WaveSabreCore
 {

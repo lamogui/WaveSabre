@@ -1,8 +1,8 @@
 #include <extern/WaveSabre/WaveSabrePlayerLib/DirectSoundRenderThread.h>
 
 #ifdef PROUT_WAVESABRE
-#include "extern/Enigma/eshared/system/types.hpp"
-#include "extern/Enigma/eshared/system/runtime.hpp"
+#include "system/types.hpp"
+#include "system/memory.hpp"
 
 namespace WaveSabrePlayerLib
 {

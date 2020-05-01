@@ -1,9 +1,9 @@
 #include "sys_buildfeatures.h"
 #ifdef PROUT_WAVESABRE
 
-#include "extern/Enigma/eshared/system/types.hpp"
-#include "extern/Enigma/eshared/system/runtime.hpp"
-
+#include "system/types.hpp"
+#include "generics/math/math.hpp"
+#include "system/memory.hpp"
 #include <extern/WaveSabre/WaveSabreCore/Adultery.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 #include <extern/WaveSabre/WaveSabreCore/GmDls.h>

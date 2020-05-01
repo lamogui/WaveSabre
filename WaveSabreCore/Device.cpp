@@ -4,8 +4,8 @@
 #include <extern/WaveSabre/WaveSabreCore/Device.h>
 #include <extern/WaveSabre/WaveSabreCore/Helpers.h>
 
-#include "extern/Enigma/eshared/system/types.hpp"
-#include "extern/Enigma/eshared/system/runtime.hpp"
+#include "system/types.hpp"
+#include "system/memory.hpp"
 
 namespace WaveSabreCore
 {
