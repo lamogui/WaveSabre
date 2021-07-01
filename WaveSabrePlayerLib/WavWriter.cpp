@@ -25,7 +25,8 @@ namespace WaveSabrePlayerLib
 		const int stepSize = 100 * SongRenderer::NumChannels;
 		int numSamples = (int)((double)(sampleRate * SongRenderer::NumChannels) * songRenderer->GetLength()) / stepSize * stepSize;
 
-		auto file = fopen(fileName, "wb");
+		FILE * file = nullptr;
+		fopen_s(&file, fileName, "wb");
 
 		int dataSubChunkSize = numSamples * bitsPerSample / 8;
 		
